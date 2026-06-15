@@ -1,0 +1,9 @@
+class Solution {
+    public int[] concatWithReverse(int[] nums) {
+        int[] a = new int[2 * nums.length];
+        for(int i = 0; i < a.length; i++) {
+            a[i] = i < nums.length ? nums[i] : nums[2 * nums.length - 1 - i];
+        }
+        return a;
+    }
+}
